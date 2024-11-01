@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay's Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #0f0f0f; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+            overflow-x: hidden;
+        }
+        /* Header with banner */
+        header {
+            background: url('cs-banner.jpg') center/cover, linear-gradient(135deg, #1a1a1a, #0d0d0d); /* Dark gradient */
+            padding: 60px 20px;
+            height: 300px; /* Set a specific height */
+            text-align: center;
+            color: #f0f0f0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        header h1 {
+            font-size: 2.5rem; /* Slightly smaller font size */
+            margin-bottom: 10px;
+            color: #ffffff; /* White text */
+        }
+        header p {
+            font-size: 1rem; /* Slightly smaller font size */
+            max-width: 700px; /* Reduced max width for smaller screens */
+            color: #c0c0c0; /* Light gray text */
+        }
+        .profile-pic {
+            width: 120px; /* Smaller profile picture */
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #888888; /* Darker border */
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            background-color: #1a1a1a; /* Dark nav background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+        }
+        nav a {
+            color: #e0e0e0; /* Light text */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4ecca3; /* Accent color */
+        }
+        section {
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease-out;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4ecca3; /* Accent color */
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills span, .project {
+            background-color: #4ecca3; /* Accent color */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: transform 0.3s;
+        }
+        .skills span:hover, .project:hover {
+            transform: scale(1.05);
+        }
+        .project {
+            padding: 15px;
+            border-radius: 5px;
+            width: 48%;
+            background-color: #333333; /* Dark project background */
+        }
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #e0e0e0; /* Light text */
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+        .social-links img {
+            width: 24px;
+            height: 24px;
+        }
+        .social-links a:hover {
+            color: #4ecca3; /* Accent color */
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Scroll Fade Animation */
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Banner and Profile Picture -->
+    <header>
+        <img src="jays.jpg" alt="Jay's Profile Picture" class="profile-pic">
+        <h1>Jay's Portfolio</h1>
+        <p><b>Welcome to my personal space on the web! Here you can explore my projects, skills, and experiences.</b></p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#social">Connect</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Jay, a diploma student at Government Polytechnic Pune, specializing in Computer Science. I am passionate about creating impactful software, especially in web development, and I always aim to learn more about the latest technologies in the field.</p>
+        <p>With a strong foundation in coding and a continuous drive to enhance my skill set, I enjoy working on projects that solve real-world problems and allow me to contribute in a meaningful way. Apart from coding, I love collaborating with others in team projects, learning from feedback, and sharing knowledge.</p>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="content">
+            <p>Diploma in Computer Science, Government Polytechnic Pune</p>
+            <p>Expected Graduation: 2025</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>C</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Interactive Calendar</h3>
+                <p>A web-based interactive calendar to keep track of assignment deadlines.</p>
+            </div>
+            <div class="project">
+                <h3>Furniture Management System</h3>
+                <p>A database-driven management system for tracking furniture inventory and orders.</p>
+            </div>
+            <div class="project">
+                <h3>C++ Project</h3>
+                <p>A project that demonstrates my understanding of C++ concepts and coding skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social">
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+            <a href="https://www.instagram.com/jayy.__.007/profilecard/?igsh=d2w1eHRhemU0ejd5" target="_blank">
+                <img src="download (2).png" alt="Instagram"> Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/jay-surse/" target="_blank">
+                <img src="download (1).png" alt="LinkedIn"> LinkedIn
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Function to handle fade-in effect when scrolling
+        const sections = document.querySelectorAll('section');
+        const fadeInOnScroll = () => {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    section.classList.add('fade-in');
+                }
+            });
+        };
+        window.addEventListener('scroll', fadeInOnScroll);
+        fadeInOnScroll(); // initial call to animate elements in view on load
+    </script>
+
+</body>
+</html>
